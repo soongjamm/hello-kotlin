@@ -1,12 +1,13 @@
 package com.nextstep.fuel
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class RentCompanyTest {
-    private val NEWLINE :String = System.getProperty("line.separator");
+    private val NEWLINE: String = System.getProperty("line.separator");
 
     @Test
-    internal fun report() {
+    fun report() {
         val company: RentCompany = RentCompany.create() // factory method를 사용해 생성
 
         company.addCar(Sonata(150))
@@ -17,11 +18,11 @@ class RentCompanyTest {
 
         val report: String = company.generateReport()
         assertThat(report).isEqualTo(
-                "Sonata : 15리터" + NEWLINE +
-                        "K5 : 20리터" + NEWLINE +
-                        "Sonata : 12리터" + NEWLINE +
-                        "Avante : 20리터" + NEWLINE +
-                        "K5 : 30리터" + NEWLINE
+            "Sonata : 15리터" + NEWLINE +
+                    "K5 : 20리터" + NEWLINE +
+                    "Sonata : 12리터" + NEWLINE +
+                    "Avante : 20리터" + NEWLINE +
+                    "K5 : 30리터" + NEWLINE
         )
     }
 }
