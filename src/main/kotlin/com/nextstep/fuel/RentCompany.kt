@@ -20,7 +20,7 @@ class RentCompany {
     fun generateReport(): String {
         val sb: StringBuilder = StringBuilder()
         for (car in cars) {
-            sb.append("${car.kind} : ${car.lackOfFuel}리터\n")
+            sb.append("${car.kind} : ${car.lackOfFuel()}리터\n")
         }
         return sb.toString()
     }

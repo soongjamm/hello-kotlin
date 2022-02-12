@@ -1,6 +1,9 @@
 package com.nextstep.fuel
 
-class Sonata(travelDistance: Int) : Car(travelDistance) {
-    override val kmPerLiter: Int = 10;
+class Sonata(private val travelDistance: Int) : Car {
     override val kind get(): String = "Sonata"
+
+    override fun lackOfFuel(): Int {
+        return this.travelDistance / 10
+    }
 }

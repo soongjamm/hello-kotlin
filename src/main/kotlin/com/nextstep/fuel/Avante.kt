@@ -1,6 +1,9 @@
 package com.nextstep.fuel
 
-class Avante(travelDistance: Int) : Car(travelDistance) {
-    override val kmPerLiter: Int = 15;
+class Avante(private val travelDistance: Int) : Car {
     override val kind get(): String = "Avante"
+
+    override fun lackOfFuel(): Int {
+        return this.travelDistance / 15
+    }
 }
