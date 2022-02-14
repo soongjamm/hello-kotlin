@@ -10,19 +10,14 @@ fun main() {
 }
 
 private fun hello(degrees: Int) {
-    val description: String
-    val color: Color
-
-    if (degrees < 10) {
-        description = "cold"
-        color = Color.BLUE
-    } else if (degrees < 25) {
-        description = "mild"
-        color = Color.ORANGE
-    } else {
-        description = "hot"
-        color = Color.RED
-    }
+    val (description: String, color: Color) =
+            if (degrees < 10) {
+                Pair("cold", Color.BLUE)
+            } else if (degrees < 25) {
+                Pair("mild", Color.ORANGE)
+            } else {
+                Pair("hot", Color.RED)
+            }
 
     println("${description}, ${color}")
 }
