@@ -1,4 +1,4 @@
-package com.coursera.fromjavatokotlin
+package com.coursera._1fromjavatokotlin
 
 enum class Color {
     RED, ORANGE, BLUE
